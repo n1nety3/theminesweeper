@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root, [data-theme="dark"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --page-bg:        #0b1622;
+  --bar-bg:         #0a1520;
+  --bar-border:     rgba(255, 255, 255, 0.05);
+  --text-primary:   #c8dae8;
+  --text-muted:     #3a5a7a;
+  --text-score:     #60a8d8;
+  --text-logo:      #e0d8c0;
+  --btn-icon-bg:    #162538;
+  --btn-icon-hover: #1e3a55;
+  --btn-icon-ring:  #1e3a55;
+  --btn-icon-color: #c8dae8;
+  /* trade buttons */
+  --trade-seed-bg:      #1a3820;
+  --trade-seed-bg-off:  #111e18;
+  --trade-seed-txt:     #7acc50;
+  --trade-seed-txt-off: #3a6030;
+  --trade-water-bg:     #0e2a40;
+  --trade-water-bg-off: #0b1822;
+  --trade-water-txt:    #50a8e0;
+  --trade-water-txt-off:#1e4060;
+  /* badges */
+  --badge-water: #7ab8d8;
+  --badge-seed:  #8abe60;
+}
+
+[data-theme="light"] {
+  --page-bg:        #c8bfaa;
+  --bar-bg:         #ede6d8;
+  --bar-border:     rgba(0, 0, 0, 0.09);
+  --text-primary:   #2a2418;
+  --text-muted:     #8a7e6a;
+  --text-score:     #3a6030;
+  --text-logo:      #2a2010;
+  --btn-icon-bg:    #cec4b0;
+  --btn-icon-hover: #bdb29e;
+  --btn-icon-ring:  #8a7e68;
+  --btn-icon-color: #2a2010;
+  /* trade buttons */
+  --trade-seed-bg:      #c0e0b0;
+  --trade-seed-bg-off:  #daecd0;
+  --trade-seed-txt:     #1e5818;
+  --trade-seed-txt-off: #6a9060;
+  --trade-water-bg:     #b0d0e8;
+  --trade-water-bg-off: #d0e8f4;
+  --trade-water-txt:    #0e4878;
+  --trade-water-txt-off:#5080a0;
+  /* badges */
+  --badge-water: #0e4878;
+  --badge-seed:  #1e5818;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--foreground);
+  font-family: var(--font-space), 'Space Grotesk', sans-serif;
+}
+
+@keyframes pump-pulse {
+  0%, 100% { transform: scale(1);    filter: brightness(1);    }
+  40%       { transform: scale(0.82); filter: brightness(1.35); }
+  60%       { transform: scale(0.82); filter: brightness(1.35); }
+}
